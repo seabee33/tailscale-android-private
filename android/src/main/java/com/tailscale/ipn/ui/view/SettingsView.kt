@@ -119,9 +119,6 @@ fun SettingsView(
           }
 
           Lists.SectionDivider()
-          Setting.Text(R.string.bug_report, onClick = settingsNav.onNavigateToBugReport)
-
-          Lists.ItemDivider()
           Setting.Text(
               R.string.about_tailscale,
               subtitle = "${stringResource(id = R.string.version)} ${AppVersion.Short()}",
@@ -219,5 +216,5 @@ fun SettingsPreview() {
   vm.tailNetLockEnabled.set(true)
   vm.isAdmin.set(true)
   vm.managedByOrganization.set("Tails and Scales Inc.")
-  SettingsView(SettingsNav({}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}), vm)
+  SettingsView(SettingsNav({}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}), vm)
 }
