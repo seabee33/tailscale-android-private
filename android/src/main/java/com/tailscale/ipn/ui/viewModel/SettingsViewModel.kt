@@ -13,7 +13,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 data class SettingsNav(
-    val onNavigateToBugReport: () -> Unit,
     val onNavigateToAbout: () -> Unit,
     val onNavigateToDNSSettings: () -> Unit,
     val onNavigateToSplitTunneling: () -> Unit,

@@ -5,7 +5,6 @@ package com.tailscale.ipn.ui.localapi
 
 import android.content.Context
 import com.tailscale.ipn.App
-import com.tailscale.ipn.ui.model.BugReportID
 import com.tailscale.ipn.ui.model.Errors
 import com.tailscale.ipn.ui.model.Ipn
 import com.tailscale.ipn.ui.model.IpnLocal
@@ -30,10 +29,8 @@ import libtailscale.FilePart
 private object Endpoint {
   const val DEBUG = "debug"
   const val DEBUG_LOG = "debug-log"
-  const val BUG_REPORT = "bugreport"
   const val PREFS = "prefs"
   const val FILE_TARGETS = "file-targets"
-  const val UPLOAD_METRICS = "upload-client-metrics"
   const val START = "start"
   const val LOGIN_INTERACTIVE = "login-interactive"
   const val RESET_AUTH = "reset-auth"
@@ -54,8 +51,6 @@ private object Endpoint {
 typealias StatusResponseHandler = (Result<IpnState.Status>) -> Unit
 
 typealias TailnetLockStatusResponseHandler = (Result<IpnState.NetworkLockStatus>) -> Unit
-
-typealias BugReportIdHandler = (Result<BugReportID>) -> Unit
 
 typealias PrefsHandler = (Result<Ipn.Prefs>) -> Unit
 
@@ -89,10 +84,6 @@ class Client(private val scope: CoroutineScope) {
 
     val path = "${Endpoint.PING}?ip=${ip}&type=disco"
     post(path, timeoutMillis = 2000L, responseHandler = responseHandler)
-  }
-
-  fun bugReportId(responseHandler: BugReportIdHandler) {
-    post(Endpoint.BUG_REPORT, responseHandler = responseHandler)
   }
 
   fun prefs(responseHandler: PrefsHandler) {

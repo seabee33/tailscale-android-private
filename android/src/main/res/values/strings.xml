@@ -41,19 +41,11 @@
     <string name="about_view_footnotes">WireGuard is a registered trademark of Jason A. Donenfeld.\n\n© 2024 Tailscale Inc. All rights reserved.\nTailscale is a registered trademark of Tailscale Inc.</string>
     <string name="managed_by">Managed by</string>
 
-    <!-- Strings for the bug reporting screen -->
-    <string name="bug_report_title">Report a bug</string>
-    <string name="bug_report_instructions_prefix">To report a bug,&#160;</string>
-    <string name="bug_report_instructions_linktext">contact our support team&#160;</string>
-    <string name="bug_report_instructions_suffix"> and include the identifier below.</string>
-    <string name="bug_report_id_desc">This ID helps us find the event in our diagnostic logs. This process does not share any of your personally-identifiable information.</string>
-
     <!-- Strings for the settings screen -->
     <string name="settings_title">Settings</string>
     <string name="settings_admin_prefix">"Manage your tailnet settings in the "</string>
     <string name="settings_admin_link">admin console</string>
     <string name="about_tailscale">About Tailscale</string>
-    <string name="bug_report">Bug report</string>
     <string name="use_ts_dns">Use Tailscale DNS</string>
     <string name="internal_debug_options">Internal debug options</string>
 
@@ -182,9 +174,6 @@
     <string name="tailnet_lock_key">Tailnet lock key</string>
     <string name="node_key_explainer">Used to sign this node from another signing device in your tailnet.</string>
     <string name="tailnet_lock_key_explainer">Used to authorize changes to the Tailnet lock configuration.</string>
-
-    <!-- Strings for the bug report screen -->
-    <string name="bug_report_id">Bug report ID</string>
     <string name="learn_more">Learn more</string>
 
     <!-- Strings for DNS settings -->
